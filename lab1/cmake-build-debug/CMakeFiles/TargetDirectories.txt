@@ -1,0 +1,5 @@
+F:/OPP/lab1/cmake-build-debug/CMakeFiles/lab1.1.dir
+F:/OPP/lab1/cmake-build-debug/CMakeFiles/lab1.2.dir
+F:/OPP/lab1/cmake-build-debug/CMakeFiles/lab1.3.dir
+F:/OPP/lab1/cmake-build-debug/CMakeFiles/edit_cache.dir
+F:/OPP/lab1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
