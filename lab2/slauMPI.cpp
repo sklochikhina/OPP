@@ -98,8 +98,8 @@ int main(int argc, char** argv) {
 
     auto* linesPerProc = new int[size];
     auto* offsets = new int[size];
-    auto* sendCounts = new int[N];
-    auto* displs = new int[N];
+    auto* sendCounts = new int[size];
+    auto* displs = new int[size];
     double* A;
 
     setMatrixParts(linesPerProc, sendCounts, displs, offsets, size);
