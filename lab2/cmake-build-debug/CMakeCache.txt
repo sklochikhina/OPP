@@ -493,6 +493,8 @@ FIND_PACKAGE_MESSAGE_DETAILS_MPI:INTERNAL=[TRUE][TRUE][c ][v2.0()]
 FIND_PACKAGE_MESSAGE_DETAILS_MPI_C:INTERNAL=[C:/Program Files (x86)/Microsoft SDKs/MPI/Lib/x64/msmpi.lib][msmpi][C:/Program Files (x86)/Microsoft SDKs/MPI/Include][TRUE][v2.0()]
 //Details about finding MPI_CXX
 FIND_PACKAGE_MESSAGE_DETAILS_MPI_CXX:INTERNAL=[C:/Program Files (x86)/Microsoft SDKs/MPI/Lib/x64/msmpi.lib][msmpi][C:/Program Files (x86)/Microsoft SDKs/MPI/Include][TRUE][v2.0()]
+//ADVANCED property for variable: MPIEXEC_EXECUTABLE
+MPIEXEC_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: MPIEXEC_MAX_NUMPROCS
 MPIEXEC_MAX_NUMPROCS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: MPIEXEC_NUMPROC_FLAG
