@@ -76,6 +76,7 @@ void simpleIteration(const double* A_part, double* b, double* x, const int* line
     }
 
     delete[] x_new;
+    if (!rank) printf("iter_count = %d\n", iter_count);
 }
 
 int main(int argc, char** argv) {
