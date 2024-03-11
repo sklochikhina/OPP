@@ -47,9 +47,7 @@ void simpleIteration(const double* A_part, double* b, double* x, const int* line
     int iter_count = 0;
     double accuracy = 1;
     double part_accuracy;
-    double B_accuracy;
-
-    if (!rank) B_accuracy = sqrt(countPartAccuracy(b, N));
+    double B_accuracy = sqrt(countPartAccuracy(b, N));
 
     while (accuracy > EPSILON && iter_count < MAX_ITERATION_NUM) {
         for (int i = 0; i < linesPerProc[rank]; i++) {
@@ -69,17 +67,12 @@ void simpleIteration(const double* A_part, double* b, double* x, const int* line
         MPI_Allgatherv(x_new, linesPerProc[rank], MPI_DOUBLE,
                        x, linesPerProc, offsets, MPI_DOUBLE, MPI_COMM_WORLD);
 
-        if (!rank) accuracy = 0;
+        accuracy = 0;
 
-        MPI_Reduce(&part_accuracy, &accuracy, 1,MPI_DOUBLE, MPI_SUM, 0, MPI_COMM_WORLD);
+        MPI_Allreduce(&part_accuracy, &accuracy, 1, MPI_DOUBLE, MPI_SUM, MPI_COMM_WORLD);
 
-        if (!rank) {
-            accuracy  = sqrt(accuracy) / B_accuracy;
-            iter_count++;
-        }
-
-        MPI_Bcast(&iter_count, 1, MPI_INT, 0, MPI_COMM_WORLD);
-        MPI_Bcast(&accuracy, 1, MPI_DOUBLE, 0, MPI_COMM_WORLD);
+        accuracy  = sqrt(accuracy) / B_accuracy;
+        iter_count++;
     }
 
     delete[] x_new;
