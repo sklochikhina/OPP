@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "lab3.2.exe"
+			"path" : "lab3.1.exe"
 		},
 		{
-			"path" : "lab3.2.pdb"
+			"path" : "lab3.1.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -14,15 +14,11 @@
 		"commands" : 
 		[
 			"add_executable",
-			"set_property",
-			"_MPI_create_imported_target",
-			"find_package",
 			"target_link_libraries"
 		],
 		"files" : 
 		[
-			"CMakeLists.txt",
-			"C:/Program Files/JetBrains/CLion 2023.1.2/bin/cmake/win/x64/share/cmake-3.27/Modules/FindMPI.cmake"
+			"CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -36,31 +32,9 @@
 				"parent" : 0
 			},
 			{
-				"command" : 3,
-				"file" : 0,
-				"line" : 6,
-				"parent" : 0
-			},
-			{
-				"file" : 1,
-				"parent" : 2
-			},
-			{
-				"command" : 2,
-				"file" : 1,
-				"line" : 1642,
-				"parent" : 3
-			},
-			{
 				"command" : 1,
-				"file" : 1,
-				"line" : 1230,
-				"parent" : 4
-			},
-			{
-				"command" : 4,
 				"file" : 0,
-				"line" : 11,
+				"line" : 12,
 				"parent" : 0
 			}
 		]
@@ -71,15 +45,11 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -fdiagnostics-color=always"
-				}
-			],
-			"includes" : 
-			[
+					"fragment" : " -std=c++11 -fopenmp -g -fdiagnostics-color=always"
+				},
 				{
-					"backtrace" : 6,
-					"isSystem" : true,
-					"path" : "C:/Program Files (x86)/Microsoft SDKs/MPI/Include"
+					"backtrace" : 2,
+					"fragment" : "-fopenmp"
 				}
 			],
 			"language" : "CXX",
@@ -97,23 +67,18 @@
 			]
 		}
 	],
-	"id" : "lab3.2::@6890427a1f51a3e7e1df",
+	"id" : "lab3.1::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-g",
+				"fragment" : "-std=c++11 -fopenmp -g",
 				"role" : "flags"
 			},
 			{
 				"fragment" : "",
 				"role" : "flags"
-			},
-			{
-				"backtrace" : 5,
-				"fragment" : "\"C:\\Program Files (x86)\\Microsoft SDKs\\MPI\\Lib\\x64\\msmpi.lib\"",
-				"role" : "libraries"
 			},
 			{
 				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
@@ -122,8 +87,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "lab3.2",
-	"nameOnDisk" : "lab3.2.exe",
+	"name" : "lab3.1",
+	"nameOnDisk" : "lab3.1.exe",
 	"paths" : 
 	{
 		"build" : ".",

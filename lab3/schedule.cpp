@@ -1,7 +1,8 @@
 #include <iostream>
 #include <cmath>
+#include <omp.h>
 
-const double EPSILON = 0.0001;
+const double EPSILON = 0.000001;
 const int N = 4000;
 const float TAU = 0.00001;
 const int MAX_ITERATION_NUM = 10000;
@@ -25,59 +26,68 @@ void createVector(double* vector) {
 
 double countAccuracy(const double* vector) {
     double accuracy = 0;
+
+#pragma omp parallel for reduction(+ : accuracy) schedule(runtime)
     for (int i = 0; i < N; i++)
         accuracy += vector[i] * vector[i];
+
     return sqrt(accuracy);
 }
 
-void simpleIteration(const double* A, double* b, double* x) {
+int main(int argc, char** argv) {
+    srand(time(nullptr));
+
+    double begin, end;
+
+    auto* A = new double[N * N];
+    auto* x = new double[N];
     auto* x_new = new double[N];
+    auto* b = new double[N];
+
     int iter_count = 0;
     double accuracy = 1;
 
+    begin = omp_get_wtime();
+
+    createMatrix(A);
+    createVector(x);
+    createVector(b);
+
+    double B_accuracy = countAccuracy(b);
+
     while (accuracy > EPSILON && iter_count < MAX_ITERATION_NUM) {
+
+#pragma omp parallel for schedule(runtime)
         for (int i = 0; i < N; i++) {
             x_new[i] = 0;
             for (int j = 0; j < N; j++)
                 x_new[i] += A[i * N + j] * x[j];
         }
 
+#pragma omp parallel for schedule(runtime)
         for (int i = 0; i < N; i++)
             x_new[i] = x_new[i] - b[i];
 
-        accuracy = countAccuracy(x_new) / countAccuracy(b);
+        accuracy = countAccuracy(x_new) / B_accuracy;
 
-        for (int i = 0; i < N; i++)
-            x[i] = x[i] - TAU * x_new[i];
+#pragma omp parallel for schedule(runtime)
+        for (int i = 0; i < N; i++) {
+            x_new[i] = x[i] - TAU * x_new[i];
+            x[i] = x_new[i];
+        }
 
         iter_count++;
     }
 
-    delete[] x_new;
-}
-
-int main() {
-    srand(time(nullptr));
-
-    auto* A = new double[N * N];
-    auto* x = new double[N];
-    auto* b = new double[N];
-
-    createMatrix(A);
-    createVector(x);
-    createVector(b);
-
-    time_t begin = time(nullptr);
-
-    simpleIteration(A, b, x);
-
-    time_t end = time(nullptr);
-
-    std::cout << "total time is " << end - begin << " seconds" << std::endl;
-
     delete[] A;
     delete[] x;
+    delete[] x_new;
     delete[] b;
+
+    end = omp_get_wtime();
+
+    std::cout << "iter_count = " << iter_count << std::endl;
+    std::cout << "total time is " << end - begin << " seconds" << std::endl;
 
     return 0;
 }
