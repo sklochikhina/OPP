@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "f:/OPP/cmake-build-debug"
+			"value" : "f:/NSU/OPP/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -575,7 +575,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "F:/OPP/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "F:/NSU/OPP/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -647,7 +647,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "F:/OPP"
+			"value" : "F:/NSU/OPP"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1751,7 +1751,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "F:/OPP/cmake-build-debug"
+			"value" : "F:/NSU/OPP/cmake-build-debug"
 		},
 		{
 			"name" : "OPP_IS_TOP_LEVEL",
@@ -1775,7 +1775,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "F:/OPP"
+			"value" : "F:/NSU/OPP"
 		},
 		{
 			"name" : "OpenMP_COMPILE_RESULT_CXX_fopenmp",

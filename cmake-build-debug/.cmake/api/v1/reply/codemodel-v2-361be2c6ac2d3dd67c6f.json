@@ -130,8 +130,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "F:/OPP/cmake-build-debug",
-		"source" : "F:/OPP"
+		"build" : "F:/NSU/OPP/cmake-build-debug",
+		"source" : "F:/NSU/OPP"
 	},
 	"version" : 
 	{

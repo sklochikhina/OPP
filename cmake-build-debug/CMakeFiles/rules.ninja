@@ -213,7 +213,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = C:\Users\kloch\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -SF:\OPP -BF:\OPP\cmake-build-debug
+  command = C:\Users\kloch\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -SF:\NSU\OPP -BF:\NSU\OPP\cmake-build-debug
   description = Re-running CMake...
   generator = 1
 

@@ -1,4 +1,4 @@
-C:\Users\kloch\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/Users/kloch/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -G Ninja -S F:\OPP -B F:\OPP\cmake-build-debug
+C:\Users\kloch\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/Users/kloch/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -G Ninja -S F:\NSU\OPP -B F:\NSU\OPP\cmake-build-debug
 -- The C compiler identification is GNU 13.1.0
 -- The CXX compiler identification is GNU 13.1.0
 -- Detecting C compiler ABI info
@@ -17,6 +17,6 @@ C:\Users\kloch\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCM
 -- Found OpenMP_C: -fopenmp (found version "4.5") 
 -- Found OpenMP_CXX: -fopenmp (found version "4.5") 
 -- Found OpenMP: TRUE (found version "4.5")  
--- Configuring done (31.7s)
--- Generating done (2.8s)
--- Build files have been written to: F:/OPP/cmake-build-debug
+-- Configuring done (39.8s)
+-- Generating done (3.6s)
+-- Build files have been written to: F:/NSU/OPP/cmake-build-debug
