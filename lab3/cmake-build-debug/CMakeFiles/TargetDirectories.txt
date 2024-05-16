@@ -1,4 +1,0 @@
-F:/OPP/lab3/cmake-build-debug/CMakeFiles/lab3.1.dir
-F:/OPP/lab3/cmake-build-debug/CMakeFiles/lab3.2.dir
-F:/OPP/lab3/cmake-build-debug/CMakeFiles/edit_cache.dir
-F:/OPP/lab3/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,11 +1,11 @@
 #!/bin/bash
-#SBATCH -J lab3 # Job name
-#SBATCH -p compclass  # Queue name (or "compclass_unstable", or "gpuserv", or "a100serv")
+#SBATCH -J lab3                 # Job name
+#SBATCH -p compclass            # Queue name (or "compclass_unstable", or "gpuserv", or "a100serv")
 #SBATCH -o lab3.schedule.%j.out # Name of stdout output file (%j expands to %jobId)
 #SBATCH -e lab3.schedule.%j.err # Name of stderr output file (%j expands to %jobId)
-#SBATCH -N 1 # Total number of nodes requested
-#SBATCH -n 1 # Total number of mpi tasks requested
-#SBATCH -t 00:30:00 # Run time (hh:mm:ss)
+#SBATCH -N 1                    # Total number of nodes requested
+#SBATCH -n 1                    # Total number of mpi tasks requested
+#SBATCH -t 00:30:00             # Run time (hh:mm:ss)
 
 module load mpi/intelmpi
 

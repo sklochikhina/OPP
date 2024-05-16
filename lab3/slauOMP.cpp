@@ -45,7 +45,7 @@ int main(int argc, char** argv) {
 
     double begin, end;
 
-    //omp_set_num_threads(1);
+    //omp_set_num_threads(4);
 
     int size = omp_get_max_threads();
 
@@ -69,8 +69,9 @@ int main(int argc, char** argv) {
     createVector(b);
 
     double B_accuracy = countAccuracy(b);
+    int i, j;
 
-#pragma omp parallel shared(accuracy)
+#pragma omp parallel shared(accuracy) private(i, j)
     {
         int thread_id = omp_get_thread_num();
 
@@ -78,29 +79,32 @@ int main(int argc, char** argv) {
         int last_index = first_index + linesPerThread[thread_id];
 
         while (accuracy > EPSILON && iter_count < MAX_ITERATION_NUM) {
-            for (int i = first_index; i < last_index; i++) {
+            for (i = first_index; i < last_index; i++) {
                 x_new[i] = 0;
-                for (int j = 0; j < N; j++)
+                for (j = 0; j < N; j++)
                     x_new[i] += A[i * N + j] * x[j];
             }
 
-            for (int i = first_index; i < last_index; i++)
+            for (i = first_index; i < last_index; i++)
                 x_new[i] = x_new[i] - b[i];
-#pragma omp barrier
 
 #pragma omp single
-            accuracy = countAccuracy(x_new) / B_accuracy;
+            accuracy = 0;
 
-/*#pragma omp master
-            printf("accuracy = %.6lf\n", accuracy);*/
+#pragma omp for reduction(+: accuracy)
+            for (i = 0; i < N; i++)
+                accuracy += x_new[i] * x_new[i];
 
-            for (int i = first_index; i < last_index; i++) {
+            for (i = first_index; i < last_index; i++) {
                 x_new[i] = x[i] - TAU * x_new[i];
                 x[i] = x_new[i];
             }
 
 #pragma omp single
-            iter_count++;
+            {
+                accuracy = sqrt(accuracy) / B_accuracy;
+                iter_count++;
+            }
         }
     }
 

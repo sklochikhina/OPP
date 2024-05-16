@@ -3,7 +3,7 @@
 #include <omp.h>
 
 const double EPSILON = 0.000001;
-const int N = 4000;
+const int N = 7000;
 const float TAU = 0.00001;
 const int MAX_ITERATION_NUM = 10000;
 
@@ -24,13 +24,19 @@ void createVector(double* vector) {
         vector[i] = (double)rand() / RAND_MAX * 10.0 - 5.0;
 }
 
+void setMatrixParts(int* linesPerThread, int* offsets, int size){
+    int lines = N / size, rest = N % size, offset = 0;
+    for (int i = 0; i < size; ++i) {
+        rest ? (linesPerThread[i] = lines + 1, rest--) : linesPerThread[i] = lines;
+        offsets[i] = offset;
+        offset += linesPerThread[i];
+    }
+}
+
 double countAccuracy(const double* vector) {
     double accuracy = 0;
-
-#pragma omp parallel for reduction(+ : accuracy) schedule(runtime)
     for (int i = 0; i < N; i++)
         accuracy += vector[i] * vector[i];
-
     return sqrt(accuracy);
 }
 
@@ -39,13 +45,22 @@ int main(int argc, char** argv) {
 
     double begin, end;
 
+    //omp_set_num_threads(4);
+
+    int size = omp_get_max_threads();
+
     auto* A = new double[N * N];
     auto* x = new double[N];
     auto* x_new = new double[N];
     auto* b = new double[N];
 
+    auto* linesPerThread = new int[size];
+    auto* offsets = new int[size];
+
     int iter_count = 0;
     double accuracy = 1;
+
+    setMatrixParts(linesPerThread, offsets, size);
 
     begin = omp_get_wtime();
 
@@ -54,35 +69,50 @@ int main(int argc, char** argv) {
     createVector(b);
 
     double B_accuracy = countAccuracy(b);
+    int i, j;
 
-    while (accuracy > EPSILON && iter_count < MAX_ITERATION_NUM) {
+#pragma omp parallel shared(accuracy) private(i, j)
+    {
+        while (accuracy > EPSILON && iter_count < MAX_ITERATION_NUM) {
 
-#pragma omp parallel for schedule(runtime)
-        for (int i = 0; i < N; i++) {
-            x_new[i] = 0;
-            for (int j = 0; j < N; j++)
-                x_new[i] += A[i * N + j] * x[j];
+#pragma omp for schedule(runtime)
+            for (i = 0; i < N; i++) {
+                x_new[i] = 0;
+                for (j = 0; j < N; j++)
+                    x_new[i] += A[i * N + j] * x[j];
+            }
+
+#pragma omp for schedule(runtime)
+            for (i = 0; i < N; i++)
+                x_new[i] = x_new[i] - b[i];
+
+#pragma omp single
+            accuracy = 0;
+
+#pragma omp for reduction(+: accuracy) schedule(runtime)
+            for (i = 0; i < N; i++)
+                accuracy += x_new[i] * x_new[i];
+
+#pragma omp for schedule(runtime)
+            for (i = 0; i < N; i++) {
+                x_new[i] = x[i] - TAU * x_new[i];
+                x[i] = x_new[i];
+            }
+
+#pragma omp single
+            {
+                accuracy = sqrt(accuracy) / B_accuracy;
+                iter_count++;
+            }
         }
-
-#pragma omp parallel for schedule(runtime)
-        for (int i = 0; i < N; i++)
-            x_new[i] = x_new[i] - b[i];
-
-        accuracy = countAccuracy(x_new) / B_accuracy;
-
-#pragma omp parallel for schedule(runtime)
-        for (int i = 0; i < N; i++) {
-            x_new[i] = x[i] - TAU * x_new[i];
-            x[i] = x_new[i];
-        }
-
-        iter_count++;
     }
 
     delete[] A;
     delete[] x;
     delete[] x_new;
     delete[] b;
+    delete[] linesPerThread;
+    delete[] offsets;
 
     end = omp_get_wtime();
 
