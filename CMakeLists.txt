@@ -1,0 +1,28 @@
+cmake_minimum_required(VERSION 3.27)
+project(OPP)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -fopenmp")
+
+find_package(MPI REQUIRED)
+find_package(OpenMP REQUIRED)
+
+add_executable(lab1.1 lab1/simple.cpp)
+add_executable(lab1.2 lab1/points.cpp)
+add_executable(lab1.3 lab1/collective.cpp)
+add_executable(lab2.1 lab2/slau.cpp)
+add_executable(lab2.2 lab2/slauMPI.cpp)
+add_executable(lab3.1 lab3/slauOMP.cpp)
+add_executable(lab3.2 lab3/schedule.cpp)
+add_executable(lab4 lab4/MatrixMul.cpp)
+add_executable(lab5 lab5/life.cpp)
+add_executable(lab6 lab6/posix.cpp)
+
+target_link_libraries(lab1.2 PUBLIC MPI::MPI_CXX)
+target_link_libraries(lab1.3 PUBLIC MPI::MPI_CXX)
+target_link_libraries(lab2.2 PUBLIC MPI::MPI_CXX)
+target_link_libraries(lab3.1 PUBLIC OpenMP::OpenMP_CXX)
+target_link_libraries(lab3.2 PUBLIC OpenMP::OpenMP_CXX)
+target_link_libraries(lab4 PUBLIC MPI::MPI_CXX)
+target_link_libraries(lab5 PUBLIC MPI::MPI_CXX)
+target_link_libraries(lab6 PUBLIC MPI::MPI_CXX)
