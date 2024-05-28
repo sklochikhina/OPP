@@ -517,6 +517,8 @@ FIND_PACKAGE_MESSAGE_DETAILS_OpenMP:INTERNAL=[TRUE][TRUE][c ][v4.5()]
 FIND_PACKAGE_MESSAGE_DETAILS_OpenMP_C:INTERNAL=[-fopenmp][C:/Users/kloch/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/libgomp.dll.a][C:/Users/kloch/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib/libmingwthrd.a][C:/Users/kloch/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib/libmingwthrd.a][v4.5()]
 //Details about finding OpenMP_CXX
 FIND_PACKAGE_MESSAGE_DETAILS_OpenMP_CXX:INTERNAL=[-fopenmp][C:/Users/kloch/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/libgomp.dll.a][C:/Users/kloch/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib/libmingwthrd.a][C:/Users/kloch/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib/libmingwthrd.a][v4.5()]
+//ADVANCED property for variable: MPIEXEC_EXECUTABLE
+MPIEXEC_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: MPIEXEC_MAX_NUMPROCS
 MPIEXEC_MAX_NUMPROCS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: MPIEXEC_NUMPROC_FLAG

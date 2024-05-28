@@ -1080,3 +1080,327 @@ events:
         
       exitCode: 0
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/kloch/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "C:/Users/kloch/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "C:/Users/kloch/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "F:/NSU/OPP/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-380zsx"
+      binary: "F:/NSU/OPP/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-380zsx"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: 'F:/NSU/OPP/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-380zsx'
+        
+        Run Build Command(s): C:/Users/kloch/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_29dcd
+        [1/2] C:\\Users\\kloch\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe  -isystem "C:/Program Files (x86)/Microsoft SDKs/MPI/Include" -fdiagnostics-color=always -o CMakeFiles/cmTC_29dcd.dir/test_mpi.c.obj -c F:/NSU/OPP/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-380zsx/test_mpi.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Users\\kloch\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_29dcd.dir/test_mpi.c.obj -o cmTC_29dcd.exe -Wl,--out-implib,libcmTC_29dcd.dll.a -Wl,--major-image-version,0,--minor-image-version,0  "C:/Program Files (x86)/Microsoft SDKs/MPI/Lib/x64/msmpi.lib"  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/kloch/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "C:/Users/kloch/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "C:/Users/kloch/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "F:/NSU/OPP/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-s14xt3"
+      binary: "F:/NSU/OPP/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-s14xt3"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++11 -fopenmp"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: 'F:/NSU/OPP/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-s14xt3'
+        
+        Run Build Command(s): C:/Users/kloch/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_70da5
+        [1/2] C:\\Users\\kloch\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe  -isystem "C:/Program Files (x86)/Microsoft SDKs/MPI/Include" -std=c++11 -fopenmp  -fdiagnostics-color=always -o CMakeFiles/cmTC_70da5.dir/test_mpi.cpp.obj -c F:/NSU/OPP/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-s14xt3/test_mpi.cpp
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Users\\kloch\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe -std=c++11 -fopenmp  CMakeFiles/cmTC_70da5.dir/test_mpi.cpp.obj -o cmTC_70da5.exe -Wl,--out-implib,libcmTC_70da5.dll.a -Wl,--major-image-version,0,--minor-image-version,0  "C:/Program Files (x86)/Microsoft SDKs/MPI/Lib/x64/msmpi.lib"  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/kloch/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "C:/Users/kloch/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/FindMPI.cmake:1672 (_MPI_try_staged_settings)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "F:/NSU/OPP/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-b8cj2b"
+      binary: "F:/NSU/OPP/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-b8cj2b"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++11 -fopenmp"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: 'F:/NSU/OPP/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-b8cj2b'
+        
+        Run Build Command(s): C:/Users/kloch/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_5dbdf
+        [1/2] C:\\Users\\kloch\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe  -isystem "C:/Program Files (x86)/Microsoft SDKs/MPI/Include" -std=c++11 -fopenmp  -fdiagnostics-color=always -o CMakeFiles/cmTC_5dbdf.dir/test_mpi.cpp.obj -c F:/NSU/OPP/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-b8cj2b/test_mpi.cpp
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Users\\kloch\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe -std=c++11 -fopenmp  CMakeFiles/cmTC_5dbdf.dir/test_mpi.cpp.obj -o cmTC_5dbdf.exe -Wl,--out-implib,libcmTC_5dbdf.dll.a -Wl,--major-image-version,0,--minor-image-version,0  "C:/Program Files (x86)/Microsoft SDKs/MPI/Lib/x64/msmpi.lib"  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/kloch/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "C:/Users/kloch/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "C:/Users/kloch/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "F:/NSU/OPP/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-wblkfd"
+      binary: "F:/NSU/OPP/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-wblkfd"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: 'F:/NSU/OPP/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-wblkfd'
+        
+        Run Build Command(s): C:/Users/kloch/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_d478f
+        [1/2] C:\\Users\\kloch\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe  -isystem "C:/Program Files (x86)/Microsoft SDKs/MPI/Include" -fdiagnostics-color=always -o CMakeFiles/cmTC_d478f.dir/test_mpi.c.obj -c F:/NSU/OPP/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-wblkfd/test_mpi.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Users\\kloch\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_d478f.dir/test_mpi.c.obj -o cmTC_d478f.exe -Wl,--out-implib,libcmTC_d478f.dll.a -Wl,--major-image-version,0,--minor-image-version,0  "C:/Program Files (x86)/Microsoft SDKs/MPI/Lib/x64/msmpi.lib"  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/kloch/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "C:/Users/kloch/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "C:/Users/kloch/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "F:/NSU/OPP/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-yegmwb"
+      binary: "F:/NSU/OPP/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-yegmwb"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++11 -fopenmp"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: 'F:/NSU/OPP/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-yegmwb'
+        
+        Run Build Command(s): C:/Users/kloch/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_197fe
+        [1/2] C:\\Users\\kloch\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe  -isystem "C:/Program Files (x86)/Microsoft SDKs/MPI/Include" -std=c++11 -fopenmp  -fdiagnostics-color=always -o CMakeFiles/cmTC_197fe.dir/test_mpi.cpp.obj -c F:/NSU/OPP/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-yegmwb/test_mpi.cpp
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Users\\kloch\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe -std=c++11 -fopenmp  CMakeFiles/cmTC_197fe.dir/test_mpi.cpp.obj -o cmTC_197fe.exe -Wl,--out-implib,libcmTC_197fe.dll.a -Wl,--major-image-version,0,--minor-image-version,0  "C:/Program Files (x86)/Microsoft SDKs/MPI/Lib/x64/msmpi.lib"  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/kloch/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "C:/Users/kloch/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/FindMPI.cmake:1672 (_MPI_try_staged_settings)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "F:/NSU/OPP/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-4uiqw0"
+      binary: "F:/NSU/OPP/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-4uiqw0"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++11 -fopenmp"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: 'F:/NSU/OPP/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-4uiqw0'
+        
+        Run Build Command(s): C:/Users/kloch/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_f3b42
+        [1/2] C:\\Users\\kloch\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe  -isystem "C:/Program Files (x86)/Microsoft SDKs/MPI/Include" -std=c++11 -fopenmp  -fdiagnostics-color=always -o CMakeFiles/cmTC_f3b42.dir/test_mpi.cpp.obj -c F:/NSU/OPP/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-4uiqw0/test_mpi.cpp
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Users\\kloch\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe -std=c++11 -fopenmp  CMakeFiles/cmTC_f3b42.dir/test_mpi.cpp.obj -o cmTC_f3b42.exe -Wl,--out-implib,libcmTC_f3b42.dll.a -Wl,--major-image-version,0,--minor-image-version,0  "C:/Program Files (x86)/Microsoft SDKs/MPI/Lib/x64/msmpi.lib"  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/kloch/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "C:/Users/kloch/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "C:/Users/kloch/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "F:/NSU/OPP/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-euqmij"
+      binary: "F:/NSU/OPP/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-euqmij"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: 'F:/NSU/OPP/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-euqmij'
+        
+        Run Build Command(s): C:/Users/kloch/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_828d1
+        [1/2] C:\\Users\\kloch\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe  -isystem "C:/Program Files (x86)/Microsoft SDKs/MPI/Include" -fdiagnostics-color=always -o CMakeFiles/cmTC_828d1.dir/test_mpi.c.obj -c F:/NSU/OPP/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-euqmij/test_mpi.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Users\\kloch\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_828d1.dir/test_mpi.c.obj -o cmTC_828d1.exe -Wl,--out-implib,libcmTC_828d1.dll.a -Wl,--major-image-version,0,--minor-image-version,0  "C:/Program Files (x86)/Microsoft SDKs/MPI/Lib/x64/msmpi.lib"  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/kloch/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "C:/Users/kloch/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "C:/Users/kloch/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "F:/NSU/OPP/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ll58d0"
+      binary: "F:/NSU/OPP/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ll58d0"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++11 -fopenmp"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: 'F:/NSU/OPP/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ll58d0'
+        
+        Run Build Command(s): C:/Users/kloch/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_fa1dc
+        [1/2] C:\\Users\\kloch\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe  -isystem "C:/Program Files (x86)/Microsoft SDKs/MPI/Include" -std=c++11 -fopenmp  -fdiagnostics-color=always -o CMakeFiles/cmTC_fa1dc.dir/test_mpi.cpp.obj -c F:/NSU/OPP/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ll58d0/test_mpi.cpp
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Users\\kloch\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe -std=c++11 -fopenmp  CMakeFiles/cmTC_fa1dc.dir/test_mpi.cpp.obj -o cmTC_fa1dc.exe -Wl,--out-implib,libcmTC_fa1dc.dll.a -Wl,--major-image-version,0,--minor-image-version,0  "C:/Program Files (x86)/Microsoft SDKs/MPI/Lib/x64/msmpi.lib"  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/kloch/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "C:/Users/kloch/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/FindMPI.cmake:1672 (_MPI_try_staged_settings)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "F:/NSU/OPP/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-a70bk2"
+      binary: "F:/NSU/OPP/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-a70bk2"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++11 -fopenmp"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: 'F:/NSU/OPP/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-a70bk2'
+        
+        Run Build Command(s): C:/Users/kloch/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_7abb6
+        [1/2] C:\\Users\\kloch\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe  -isystem "C:/Program Files (x86)/Microsoft SDKs/MPI/Include" -std=c++11 -fopenmp  -fdiagnostics-color=always -o CMakeFiles/cmTC_7abb6.dir/test_mpi.cpp.obj -c F:/NSU/OPP/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-a70bk2/test_mpi.cpp
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Users\\kloch\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe -std=c++11 -fopenmp  CMakeFiles/cmTC_7abb6.dir/test_mpi.cpp.obj -o cmTC_7abb6.exe -Wl,--out-implib,libcmTC_7abb6.dll.a -Wl,--major-image-version,0,--minor-image-version,0  "C:/Program Files (x86)/Microsoft SDKs/MPI/Lib/x64/msmpi.lib"  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/kloch/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "C:/Users/kloch/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "C:/Users/kloch/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "F:/NSU/OPP/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-33kot5"
+      binary: "F:/NSU/OPP/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-33kot5"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: 'F:/NSU/OPP/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-33kot5'
+        
+        Run Build Command(s): C:/Users/kloch/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_848fe
+        [1/2] C:\\Users\\kloch\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe  -isystem "C:/Program Files (x86)/Microsoft SDKs/MPI/Include" -fdiagnostics-color=always -o CMakeFiles/cmTC_848fe.dir/test_mpi.c.obj -c F:/NSU/OPP/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-33kot5/test_mpi.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Users\\kloch\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_848fe.dir/test_mpi.c.obj -o cmTC_848fe.exe -Wl,--out-implib,libcmTC_848fe.dll.a -Wl,--major-image-version,0,--minor-image-version,0  "C:/Program Files (x86)/Microsoft SDKs/MPI/Lib/x64/msmpi.lib"  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/kloch/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "C:/Users/kloch/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "C:/Users/kloch/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "F:/NSU/OPP/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-hjvnmu"
+      binary: "F:/NSU/OPP/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-hjvnmu"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++11 -fopenmp"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: 'F:/NSU/OPP/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-hjvnmu'
+        
+        Run Build Command(s): C:/Users/kloch/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_2b8ce
+        [1/2] C:\\Users\\kloch\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe  -isystem "C:/Program Files (x86)/Microsoft SDKs/MPI/Include" -std=c++11 -fopenmp  -fdiagnostics-color=always -o CMakeFiles/cmTC_2b8ce.dir/test_mpi.cpp.obj -c F:/NSU/OPP/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-hjvnmu/test_mpi.cpp
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Users\\kloch\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe -std=c++11 -fopenmp  CMakeFiles/cmTC_2b8ce.dir/test_mpi.cpp.obj -o cmTC_2b8ce.exe -Wl,--out-implib,libcmTC_2b8ce.dll.a -Wl,--major-image-version,0,--minor-image-version,0  "C:/Program Files (x86)/Microsoft SDKs/MPI/Lib/x64/msmpi.lib"  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/kloch/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "C:/Users/kloch/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/FindMPI.cmake:1672 (_MPI_try_staged_settings)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "F:/NSU/OPP/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-oj85vz"
+      binary: "F:/NSU/OPP/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-oj85vz"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++11 -fopenmp"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: 'F:/NSU/OPP/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-oj85vz'
+        
+        Run Build Command(s): C:/Users/kloch/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_38cbf
+        [1/2] C:\\Users\\kloch\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe  -isystem "C:/Program Files (x86)/Microsoft SDKs/MPI/Include" -std=c++11 -fopenmp  -fdiagnostics-color=always -o CMakeFiles/cmTC_38cbf.dir/test_mpi.cpp.obj -c F:/NSU/OPP/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-oj85vz/test_mpi.cpp
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Users\\kloch\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe -std=c++11 -fopenmp  CMakeFiles/cmTC_38cbf.dir/test_mpi.cpp.obj -o cmTC_38cbf.exe -Wl,--out-implib,libcmTC_38cbf.dll.a -Wl,--major-image-version,0,--minor-image-version,0  "C:/Program Files (x86)/Microsoft SDKs/MPI/Lib/x64/msmpi.lib"  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+...
